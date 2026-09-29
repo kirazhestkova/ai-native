@@ -9,6 +9,7 @@ Each skill lives in its own folder and is self-contained (its own `SKILL.md`, `R
 | Skill | What it does |
 |-------|--------------|
 | [**second-brain-builder**](./second-brain-builder) | Interviews you about how you actually work, then produces a personalised Second Brain plan as a PDF — folder architecture, core document skeletons, an automation roadmap, and a step-by-step implementation list your own AI agent can pick up and build. Plans; doesn't build. |
+| [**expert-passport-builder**](./expert-passport-builder) | Builds an AI expert with a clear decision method, evidence-backed influences, boundaries, acceptance criteria, and a learning log. Works with your own goals and projects. |
 
 *(More skills will be added here over time.)*
 
