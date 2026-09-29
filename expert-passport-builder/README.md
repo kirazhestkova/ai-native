@@ -42,6 +42,10 @@ Then try:
 - `SKILL.md` — the workflow and quality check.
 - `references/passport-template.md` — the passport, influence, and log formats.
 
+## Credits
+
+Created by **Kira Zhestkova** · [LinkedIn](https://www.linkedin.com/in/kira-zhestkova-ainative/)
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
