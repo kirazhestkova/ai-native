@@ -2,3 +2,5 @@ interface:
   display_name: "Team Lead for Codex"
   short_description: "Choose solo or delegated work with clear checks"
   default_prompt: "Use $team-lead-codex to plan and complete this project task, asking only for missing context and explaining the SOLO or LEAD decision."
+policy:
+  allow_implicit_invocation: true

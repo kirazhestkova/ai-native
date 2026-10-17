@@ -1,16 +1,16 @@
 ---
 name: team-lead-codex
 description: >-
-  Plan and coordinate project work in Codex. Use for builds, refactors, migrations,
-  research or document batches, multi-step tasks, and requests for team lead mode.
-  Decide whether to work solo or delegate bounded tasks using the models and tools
-  available to the user. Preserve quality and safety; delegate only when total
-  token use is conservatively expected not to increase. Other task skills retain
-  ownership of their workflows.
+  Plan and coordinate Codex project work: builds, refactors, migrations, research
+  or document batches, multi-step tasks and team lead mode. Also use to configure
+  saved Team Lead project preferences and standing invocation rules. Choose SOLO
+  or bounded delegation using available models only when total token use is
+  expected not to increase at unchanged quality and safety. Other task skills
+  retain ownership of their workflows.
 license: MIT
 metadata:
   author: "Kira Zhestkova"
-  version: "1.1.0"
+  version: "1.2.0"
   last-updated: "2026-10-17"
   platform: codex
 ---
@@ -45,19 +45,32 @@ On first use in a project, resolve the following from existing evidence:
 
 Ask only about missing information that changes the next decision, one question
 at a time. Start with the most consequential gap, for example: "Which project
-should I work in?" Ask about the outcome next only if it remains unclear. A complete task brief
-needs no setup interview. An absent optional plan, reviewer preference or model
-preference does not block ordinary work.
+should I work in?" Ask about the outcome next only if it remains unclear. A complete
+task brief needs no setup interview. An absent optional plan, reviewer preference
+or model preference does not block ordinary work.
 
-Keep answers in the conversation. Save reusable setup only when the user asks or
-an existing project process calls for it. Do not create a profile, change agent
-rules, install hooks, alter model settings or connect an account as part of setup.
+Read project preferences referenced by the applicable instructions or a root
+`TEAM_LEAD.md` when present. Reuse approved defaults, subject to current
+instructions and the user's current task.
+When no equivalent saved setup is present, offer optional persistence once in
+the conversation, at a point that does not interrupt the requested work. The
+user can save project preferences, add a standing invocation rule, choose both,
+or keep the session temporary. Declining creates no files and does not block work.
+
+Before preparing or applying saved setup, load
+[Optional project setup](references/project-setup.md). Show the exact proposed
+file paths and changes, then obtain explicit approval before writing. Approval
+to discuss setup does not approve an unseen agent-rule edit. Reuse a prior
+approval of the displayed changes without asking again. Never silently change
+personal/global agent rules, install hooks, alter model settings or connect an
+account. Keep unrelated personal information out of project records.
+
 For a project outside the current workspace, resolve the intended location before
 writing. Work without a filesystem can use the documents supplied in the chat.
 
 ## 2. Announce SOLO or LEAD
 
-Before substantive execution, state `team-lead-codex v1.1.0`, complexity, risk and
+Before substantive execution, state `team-lead-codex v1.2.0`, complexity, risk and
 the decision in one line:
 
 - C0: one step; C1: bounded routine work; C2: several work packages; C3: a program.

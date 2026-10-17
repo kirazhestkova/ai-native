@@ -35,9 +35,43 @@ Use workers only if the total-token comparison supports it.
 Keep deployment for my review. Record progress in the existing project plan.
 ```
 
-Answers stay in the conversation. Saving reusable setup is optional and needs
-your request or an existing project process. The skill does not create personal
-context files or change your agent configuration during setup.
+Answers stay in the conversation unless you approve saving project setup. On
+first use without existing setup, the skill offers to prepare project preferences
+and a standing Team Lead rule. For a small task, it can offer this after finishing
+the work. You can save preferences, add the rule, choose both, or skip.
+
+## Reuse setup in new chats
+
+If you opt in, the skill shows the exact file paths and proposed changes before
+writing anything. It uses an existing project document for preferences or proposes
+`TEAM_LEAD.md` at the project root. Preferences cover the project, model choices,
+checks, reviews and action boundaries. Personal profiles and secrets stay out.
+
+The standing rule goes in the project's effective `AGENTS.md` or equivalent
+instruction file. A typical addition is:
+
+```text
+Before substantive project work, use the installed team-lead-codex skill
+to decide SOLO or LEAD. Read TEAM_LEAD.md for approved project preferences.
+```
+
+After you approve the displayed changes, the skill saves and checks them. Future
+invocations reuse the preferences. Existing equivalent setup is left in place,
+and the setup offer is skipped. If you decline, no files are created; the choice
+is remembered for this conversation. A later chat cannot remember an unsaved
+choice and may offer again.
+
+Saving preferences alone does not activate the skill. Adding the standing rule
+provides durable project guidance for future Codex sessions; activation remains
+instruction-based and requires the skill to be installed and available. It is
+not an enforced startup hook or a guarantee for every message. A new session may
+be needed to load updated project instructions. See
+[OpenAI's project-instruction documentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
+
+The setup is scoped to your project. It preserves existing rules, shows a new
+preview if the files change before approval, and never modifies global agent
+settings or publishes preferences without separate authorization. A chat without
+file access can receive the setup text to save later, but no persistence is claimed.
 
 ## What to expect
 
@@ -81,7 +115,7 @@ doesn't appear in the selector, restart Codex. These locations follow
 [OpenAI's skill documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills).
 
 This folder is a standalone skill package. It includes `SKILL.md`, this README,
-`LICENSE`, optional Codex display metadata and the engineering reference. Copy
+`LICENSE`, optional Codex display metadata and the engineering/setup references. Copy
 the whole folder so relative links continue to work.
 
 ## Models and tools
@@ -119,4 +153,4 @@ repository. You may use, modify and share it while retaining the copyright and
 license notice.
 
 Created by [Kira Zhestkova](https://www.linkedin.com/in/kira-zhestkova-ainative/).
-Public edition: 1.1.0.
+Public edition: 1.2.0.
