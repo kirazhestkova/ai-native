@@ -1,6 +1,6 @@
 # Kira's Skills
 
-A public collection of **Claude / Cowork skills** by [Kira Zhestkova](https://www.linkedin.com/in/kira-zhestkova-ainative/) — ex-CMO (Skyeng), founder of **Jaqra** (AI stylist).
+A public collection of **Codex, Claude and Cowork skills** by [Kira Zhestkova](https://www.linkedin.com/in/kira-zhestkova-ainative/) — ex-CMO (Skyeng), founder of **Jaqra** (AI stylist).
 
 Each skill lives in its own folder and is self-contained (its own `SKILL.md`, `README.md`, and `LICENSE`), so you can install any one of them on its own.
 
@@ -10,6 +10,7 @@ Each skill lives in its own folder and is self-contained (its own `SKILL.md`, `R
 |-------|--------------|
 | [**second-brain-builder**](./second-brain-builder) | Interviews you about how you actually work, then produces a personalised Second Brain plan as a PDF — folder architecture, core document skeletons, an automation roadmap, and a step-by-step implementation list your own AI agent can pick up and build. Plans; doesn't build. |
 | [**expert-passport-builder**](./expert-passport-builder) | Builds an AI expert with a clear decision method, evidence-backed influences, boundaries, acceptance criteria, and a learning log. Works with your own goals and projects. |
+| [**team-lead-codex**](./team-lead-codex) | Coordinates project work in Codex: reads your project context, asks only for missing information, chooses SOLO or LEAD, and verifies the result. No personal knowledge base required. |
 
 *(More skills will be added here over time.)*
 
@@ -23,7 +24,8 @@ git clone https://github.com/kirazhestkova/ai-native.git
 
 Then pick a skill's folder and use whichever fits your setup:
 
-- **Claude Code:** copy the skill folder into `~/.claude/skills/<skill-name>/`.
+- **Codex:** copy a Codex skill folder into `~/.agents/skills/<skill-name>/` or your project's `.agents/skills/<skill-name>/`. See the skill's README for runtime requirements.
+- **Claude Code:** copy a Claude-compatible skill folder into `~/.claude/skills/<skill-name>/`.
 - **Cowork:** drop the folder into your Cowork skills directory, or zip it with a `.skill` extension and install it.
 
 Each skill's own `README.md` has the details.
